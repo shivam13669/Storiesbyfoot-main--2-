@@ -89,7 +89,7 @@ const DestinationsPage = () => {
                     <MapPin className="h-4 w-4" /> {activeDestination.region}
                   </div>
 
-                  <p className="mt-3 line-clamp-2 text-sm text-muted-foreground">
+                  <p className="mt-3 text-sm text-muted-foreground">
                     {pkg.description}
                   </p>
 
