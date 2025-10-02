@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { destinationIconMap, destinations } from "@/data/destinations";
-import { ArrowRight, Calendar, MapPin, Star } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, MapPinned, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DestinationsPage = () => {
@@ -19,6 +19,22 @@ const DestinationsPage = () => {
       <Navigation />
 
       <main className="pt-24 pb-20">
+        {/* Hero */}
+        <section className="container mx-auto px-4 text-center">
+          <div className="mx-auto max-w-3xl space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+              <MapPinned className="h-4 w-4" />
+              Explore destinations crafted for storytellers
+            </span>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Curated journeys across the Himalayas
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Choose from high-altitude odysseys, monastery circuits, rainforest trails, and cultural immersions designed by our expedition experts.
+            </p>
+          </div>
+        </section>
+
         {/* Category Tabs */}
         <section className="container mx-auto px-4">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
