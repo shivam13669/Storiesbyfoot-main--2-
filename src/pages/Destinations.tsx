@@ -56,7 +56,7 @@ const DestinationsPage = () => {
                   onClick={() => setActiveSlug(d.slug)}
                   aria-pressed={active}
                   className={[
-                    "inline-flex shrink-0 items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors snap-start",
+                    "inline-flex shrink-0 items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors snap-start whitespace-nowrap min-w-max",
                     active
                       ? "bg-primary text-primary-foreground border-primary"
                       : "bg-transparent text-foreground border-border hover:border-primary/50 hover:text-primary",
