@@ -46,7 +46,7 @@ const DestinationsPage = () => {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:gap-3 sm:overflow-x-auto sm:pb-2">
+          <div className="mt-8 flex flex-nowrap gap-3 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
             {destinations.map((d) => {
               const Icon = destinationIconMap[d.icon];
               const active = d.slug === activeSlug;
@@ -56,7 +56,7 @@ const DestinationsPage = () => {
                   onClick={() => setActiveSlug(d.slug)}
                   aria-pressed={active}
                   className={[
-                    "flex w-full items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors text-center sm:w-auto",
+                    "inline-flex shrink-0 items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
                     active
                       ? "bg-primary text-primary-foreground border-primary"
                       : "bg-transparent text-foreground border-border hover:border-primary/50 hover:text-primary",
