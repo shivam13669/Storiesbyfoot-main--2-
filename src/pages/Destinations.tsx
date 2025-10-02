@@ -37,13 +37,9 @@ const DestinationsPage = () => {
 
         {/* Category Tabs */}
         <section className="container mx-auto px-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <span className="text-sm font-semibold uppercase tracking-wide text-primary">Explore</span>
-              <h2 className="mt-1 text-3xl font-semibold">Pick a region to uncover handpicked tours</h2>
-              <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-                Switch between regions to preview signature expeditions, price drops, and ratings in one glance.
-              </p>
+              <h2 className="text-3xl font-bold">Choose a destination</h2>
             </div>
             <Link to="/destinations" className="flex items-center gap-2 text-sm font-semibold text-primary">
               View all destinations
@@ -59,19 +55,14 @@ const DestinationsPage = () => {
                   key={d.slug}
                   onClick={() => setActiveSlug(d.slug)}
                   className={[
-                    "group flex min-w-[180px] items-center gap-3 rounded-full border px-5 py-3 text-sm font-medium transition-all",
+                    "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
                     active
-                      ? "border-primary/40 bg-primary text-primary-foreground shadow"
-                      : "border-border/60 bg-muted/60 text-muted-foreground hover:border-primary/30 hover:bg-primary/10 hover:text-primary",
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-transparent text-foreground border-border hover:border-primary/50 hover:text-primary",
                   ].join(" ")}
                 >
-                  <span className="rounded-full bg-white/20 p-2 text-current transition-colors group-hover:bg-white/30">
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  <div className="text-left">
-                    <span className="block text-sm font-semibold">{d.name}</span>
-                    <span className="text-xs text-muted-foreground">{d.tagline}</span>
-                  </div>
+                  <Icon className="h-4 w-4" />
+                  <span className="font-medium">{d.name}</span>
                 </button>
               );
             })}
